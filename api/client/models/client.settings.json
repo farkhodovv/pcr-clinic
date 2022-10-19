@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "client",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "date_birth": {
+      "type": "string",
+      "required": true
+    },
+    "passport": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "phone": {
+      "required": true,
+      "type": "biginteger"
+    },
+    "date_tested": {
+      "type": "string",
+      "required": true
+    },
+    "type_of": {
+      "type": "enumeration",
+      "enum": [
+        "PCR"
+      ]
+    },
+    "result": {
+      "type": "enumeration",
+      "enum": [
+        "positive",
+        "negative"
+      ]
+    }
+  }
+}
